@@ -1,0 +1,81 @@
+//- Author:  Doug Cameron
+//- June  14th, 2020
+//- Course Module :  Web Application Development CPRG-210-OSD
+//- Assignment : 5
+//- This the pug code for the contact page
+
+extends layout
+block title
+    title Contact
+block heading
+    h1 #{msgContact} <!-- receive the msg from the app.js file     -->
+block content
+  div
+  
+  .container
+    form(action='/create-post' method='post')
+      p#fname-box.fname-box Enter your first name e.g. Joesph
+      label(for='fname') First Name
+      br
+      input(type='text' name='fname' onfocus="textOnFocus('fname')" onblur="textOnBlur('fname')")
+      p#lname-box.lname-box Enter your last name e.g. Cameron
+      label(for='lname') Last Name
+      br
+      input(type='text' name='lname' onfocus="textOnFocus('lname')" onblur="textOnBlur('lname')")
+      p#email-box.email-box Enter your email e.g. henry.fonda@edu.sait.ca
+      label(for='email') Email
+      br
+      input(type='text' name='email' onchange='checkEmail(this)' onfocus="textOnFocus('email')" onblur="textOnBlur('email')")
+      p#stnum-box.stnum-box Enter your street num e.g. 222 or 222A
+      label(for='streetnum') Street Number
+      br
+      input(type='text' name='stnum' onfocus="textOnFocus('stnum')" onblur="textOnBlur('stnum')")
+      p#stname-box.stname-box Enter your streetname name e.g. Center Ave
+      label(for='streetnanme') Street Name
+      br
+      input(type='text' name='stname' onfocus="textOnFocus('stname')" onblur="textOnBlur('stname')")
+      p#city-box.city-box Enter your city e.g. Calgary
+      label(for='city') City
+      br
+      input(type='text' name='city' onfocus="textOnFocus('city')" onblur="textOnBlur('city')")
+      br
+      br
+      label(for='prov') Select your Provincal Code
+      br
+      select(name='prov')
+        option(value='AB') AB
+        option(value='BC') BC
+        option(value='MB') MB
+        option(value='NB') NB
+        option(value='NL') NL
+        option(value='NT') NT
+        option(value='NS') NS
+        option(value='NU') NU
+        option(value='ON') ON
+        option(value='PE') PE
+        option(value='QC') QC
+        option(value='YT') YT
+      br
+      br
+      p#postal-box.postal-box Enter your Postal Code e.g. T2R 0K1
+      label(for='postal') Postal Code
+      br
+      input(type='text' name='postal' onchange='checkPostal(this)' onfocus="textOnFocus('postal')" onblur="textOnBlur('postal')")
+      label(for='newsletter') Subscribe to Newsletter
+      input(type='checkbox' name='subscribe' value='subscribe')
+      br
+      br
+      label(for='howdid') How did you find us?
+      br
+      select(name='howid')
+        option(value='Friend') Friend
+        option(value='Internet') Internet Search
+        option(value='Ad') Advertisement
+        option(value='Other') Other
+      br
+      br
+      input(type='submit' value='Submit' onclick='return validate(this.form)')
+      input(type='reset' value='Reset Form')
+    br
+    br
+    p#errormessages.error-messages 

@@ -1,0 +1,23 @@
+//- Author:  Doug Cameron
+//- June  14th, 2020
+//- Course Module :  Web Application Development CPRG-210-OSD
+//- Assignment : 5
+//- This the pug code for main layout template
+doctype html
+head
+  link(rel='stylesheet' , href='reset.css')
+  link(rel='stylesheet' , href='styles.css')
+  block title
+      title title
+header
+    img#logo(src='logo-small.png' alt='Table-Ready-logo' title='Table Ready')
+    br
+    h1 Table Ready - Welcome
+    br
+    br
+    block heading
+        h1 text
+    body
+      block content
+      
+    footer &copy; 2020 All Rights Reserved by Doug Cameron

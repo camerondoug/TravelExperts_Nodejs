@@ -1,0 +1,32 @@
+//- Author:  Doug Cameron
+//- June  14th, 2020
+//- Course Module :  Web Application Development CPRG-210-OSD
+//- Assignment : 5
+//- This the pug code for the index page
+
+extends layout
+block title
+    title Main Page
+block heading
+    h1 #{greet} <!-- receive the msg from the app.js file     -->
+block content
+    div
+      section
+        .divpicture
+          h2 Available for lunch now
+          .column
+            p The River Cafe
+            img.image1(src='lunch-small.jpg' alt='lunch.jpg' title='Open for Lunch Near You')
+      .clearfix
+      nav
+        .divpicture
+          .column
+            p Contact Us
+            a(href='contact')
+              img.image1(src='contact_us_small.jpg' alt='contact_us.jpg')
+          .column
+            p Register
+            a(href='register')
+              img.image1(src='register.png' alt='register.png')
+      .clearfix
+      

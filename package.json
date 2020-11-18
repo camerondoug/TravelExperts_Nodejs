@@ -1,0 +1,26 @@
+{
+  "name": "exercise-5",
+  "version": "1.0.0",
+  "description": "Package for exercise 2",
+  "main": "displayGreeting.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "Exercise",
+    "5"
+  ],
+  "author": "Doug",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9",
+    "path": "^0.12.7",
+    "pug": "^3.0.0",
+    "pug-layout": "^1.2.3"
+  }
+}

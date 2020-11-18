@@ -1,0 +1,22 @@
+//- Author:  Doug Cameron
+//- June  14th, 2020
+//- Course Module :  Web Application Development CPRG-210-OSD
+//- Assignment : 5
+//- This the pug code for the display account page
+
+extends layout
+block title
+    title Query Results
+block content
+  table(style='width:20%', border='1')
+    tr
+      th First Name
+      th Last Name
+      th Email
+      th First Name
+      th First Name
+    tr 
+      td #{results.fname}
+      td #{results.lname} 
+      td #{results.email}
+      td #{results.stum} 
